@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/inter/800.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Brand palette — light theme, Saffron + Green on white */
+  --color-navy: #111827; /* deep ink for text/dark accents */
+  --color-ice: #fafaf9;
+  --color-silver: #f0efed;
+  --color-charcoal: #202938;
+  --color-success: #138808;
+  --color-warning: #d99122;
+  --color-error: #dc4545;
+
+  /* Saffron scale (brand primary) — #FF9933 */
+  --color-teal-50: #fff9ed;
+  --color-teal-100: #ffefd6;
+  --color-teal-200: #ffdb9e;
+  --color-teal-300: #ffc266;
+  --color-teal-400: #ffab3d;
+  --color-teal-500: #ff9933;
+  --color-teal-600: #e67f1e;
+  --color-teal-700: #bf6216;
+  --color-teal-800: #994c15;
+  --color-teal-900: #7a3d14;
+  --color-teal-950: #441f07;
+
+  /* India Green scale (brand secondary) — #138808 */
+  --color-green-50: #f2fbf1;
+  --color-green-100: #e0f6df;
+  --color-green-200: #c2edc2;
+  --color-green-300: #92de95;
+  --color-green-400: #58c760;
+  --color-green-500: #35aa3d;
+  --color-green-600: #138808;
+  --color-green-700: #166f1b;
+  --color-green-800: #16581b;
+  --color-green-900: #14491a;
+  --color-green-950: #06280c;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: var(--color-charcoal);
+  font-size: 15px;
+  overscroll-behavior-y: none;
+}
+
+::selection {
+  background-color: rgb(255 153 51 / 0.3);
+}
+
+/* Hide number input spinners for a cleaner look */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(100 116 139 / 0.35);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
